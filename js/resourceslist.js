@@ -1,9 +1,10 @@
-var serviceURL = "http://depottest2.comoj.com/ade/services/";
+var serviceURL = "services/";
 
 $('#resourcesListPage').bind('pagebeforeshow', function(event) {
 	getResourcesList();
 });
 
+//Ajoute la liste des resources
 function getResourcesList() {
 	$('#resourceslist li').remove();
 	$.getJSON(serviceURL + 'getresources.php', function(resources) {
